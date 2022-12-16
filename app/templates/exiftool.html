@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %}
+{{title}}
+{% endblock %}
+{% block body %}
+	<nav class="navbar bg-light shadow text-center ">
+		<h1 class="mx-auto">
+			<b class="text-primary"></b><b class="text-dark">{{title}}</b>
+		</h1>
+	</nav>
+	<div class="container py-4 my-4 px-2 shadow rounded">
+		<form class="text-center" action="/exiftool" id="upload-file" method="post" enctype="multipart/form-data">
+			<span> Files supported (jpeg, jpg, png, gif) Images.</span>
+			<br>
+			<span>Maximum file size : 10MB</span>
+			<div class="my-3 mx-auto shadow" style="max-width: 600px;">
+			  <select class="form-select form-select-lg mb-3 exif" aria-label=".form-select-lg ">
+			  	<option value="file" selected="true"> Upload File
+			  	</option>
+			  	<option value="path" > Locally File Path
+			  	</option>
+			  </select>
+			 <input class="form-control files"  name="file" type="file" id="files" >
+			    <input class="form-control path" placeholder="file path with filename"   name="path" type="text" id="path" >
+			</div>
+				<input type="submit" class="btn btn-success upload" value="Upload" name="">
+		</form>
+	</div>
+	<div class="container">
+		<h1 class="text-dark mx-3">Receive Files</h1>
+		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 ">
+			{% for x in recv_files %}
+
+			{% if x[-3:] in ['mp4','png','gif','jpg','mp3']  or x[-4:] in ['jpeg']%}
+			{% endif %}
+			<div class="col text-center mb-2">
+                    <div class="shadow p-2 border border-dark rounded">
+                        <img src="{{recv_files_path}}{{x}}"  class="img-fluid p-1 lazyimg" alt="">
+                        <div class="d-flex justify-content-around align-items-center">
+                                <a href="{{recv_files_path}}{{x}}"  class=" bg-success  text-white btn btn-success ">View</a>
+                                <a href="{{recv_files_path}}{{x}}" download="{{x}}" class=" bg-success  text-white btn btn-success ">Download</a>
+                        </div>
+                    </div>
+            </div>  
+            {% else %} 
+            <h1>Document</h1>  
+            {% endfor %}
+	    </div>
+	    <h1 class="text-dark mx-3 mt-4">Send Files</h1>
+		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 ">
+			{% for x in send_files %}
+			<div class="col text-center mb-2">
+                    <div class="shadow p-2 border border-dark rounded">
+                        <img src="{{send_files_path}}{{x}}"  class="img-fluid p-1 lazyimg" alt="">
+                        <div class="d-flex justify-content-around align-items-center">
+                                <a href="{{send_files_path}}{{x}}"  class=" bg-success  text-white btn btn-success ">View</a>
+                                <a href="{{send_files_path}}{{x}}" download="{{x}}" class=" bg-success  text-white btn btn-success ">Download</a>
+                        </div>
+                    </div>
+            </div>
+            {% endfor %}
+	    </div>
+	</div>
+
+{% endblock %}

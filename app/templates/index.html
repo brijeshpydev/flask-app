@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+{{title}}
+{% endblock %}
+{% block body %}
+<nav class="navbar bg-dark shadow text-center">
+	<h1 class="mx-auto">
+		<b class="text-primary"></b><b class="energos">{{title}}</b>
+	</h1>
+</nav>
+<div class="container py-4 px-2 text-center">
+	<ul class="navbar-nav">
+		{% for x in anchor_list %}
+		<li class="nav-item bg-primary mb-3">
+			<a href="{{anchor_list[x][0]}}" class="nav-link energos">{{anchor_list[x][1]}}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endblock  %}

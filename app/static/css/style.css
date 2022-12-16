@@ -1,0 +1,143 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+:root{
+	--energos:#C4E538;
+	--android-green:#A3CB38;
+	--phixleted-grass:#009432;
+	--pigment:#EA2027;
+	--purple:#9980FA;
+	--tea:#D980FA;
+	--sunflower:#FFC312;
+	--magenta-purple:#6F1E51;
+	--bara-red:#ED4C67;
+	--turkish-aqua:#006266;
+	--blue-martina:#12CBC4;
+	--sea:#1B1464;
+	--dark:rgba(0, 0, 0, 0.9);
+	--orchid:#2d3436;
+	--breez:#b2bec3;
+	--river:#636e72;
+	--avium:#e84393;
+	--pico-8-pink:#fd79a8;
+	--faded:#81ecec;
+}
+/*text-color*/
+.faded{
+	color: var(--faded)!important;
+}
+.pico-8-pink{
+	color: var(--pico-8-pink)!important;
+}
+.avium{
+	color: var(--avium)!important;
+}
+.river{
+	color: var(--river)!important;
+}
+.breez{
+	color: var(--breez)!important;
+}
+.orchid{
+	color: var(--orchid)!important;
+}
+.sea{
+	color: var(--sea)!important;
+}
+.blue-martina{
+	color: var(--blue-martina)!important;
+}
+.bara-red{
+	color: var(--bara-red)!important;
+}
+.magenta-purple{
+	color: var(--magenta-purple)!important;
+}
+.sunflower{
+	color: var(--sunflower)!important;
+}
+.tea{
+	color: var(--tea)!important;
+}
+.purple{
+	color: var(--purple)!important;
+}
+.pigment{
+	color:var(--pigment)!important;
+}
+.phixleted-grass{
+	color:var(--phixleted-grass)!important;
+}
+.android-green{
+	color:var(--android-green)!important;
+}
+.energos{
+	color:var(--energos)!important;
+}
+.dark{
+	color:var(--dark)!important;
+}
+
+/*bg-color*/
+.bg-dark{
+	background-color: var(--dark)!important;
+}
+.bg-faded{
+	background-color: var(--faded)!important;
+}
+.bg-pico-8-pink{
+	background-color: var(--pico-8-pink)!important;
+}
+.bg-avium{
+	background-color: var(--avium)!important;
+}
+.bg-river{
+	background-color: var(--river)!important;
+}
+.bg-breez{
+	background-color: var(--breez)!important;
+}
+.bg-orchid{
+	background-color: var(--orchid)!important;
+}
+.bg-sea{
+	background-color: var(--sea)!important;
+}
+.bg-blue-martina{
+	background-color: var(--blue-martina)!important;
+}
+.bg-bara-red{
+	background-color: var(--bara-red)!important;
+}
+.bg-magenta-purple{
+	background-color: var(--magenta-purple)!important;
+}
+.bg-sunflower{
+	background-color: var(--sunflower)!important;
+}
+.bg-tea{
+	background-color: var(--tea)!important;
+}
+.bg-purple{
+	background-color: var(--purple)!important;
+}
+.bg-pigment{
+	background-color:var(--pigment)!important;
+}
+.bg-phixleted-grass{
+	background-color:var(--phixleted-grass)!important;
+}
+.bg-android-green{
+	background-color:var(--android-green)!important;
+}
+.bg-energos{
+	background-color:var(--energos)!important;
+}
+
+.data{
+	overflow-wrap: break-word;
+}
+.phone_back{
+	text-align: center;
+}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+{{title}}
+{% endblock %}
+{% block body %}
+
+<nav class="navbar bg-dark shadow text-center">
+	<h1 class="mx-auto">
+		<b class="text-primary"></b><b class="text-white">{{title}}</b>
+	</h1>
+</nav>
+<div class="container  py-4 my-4 px-2" style="max-height: 500px;">
+	{% for x in iSp %}
+	<div class="d-flex justify-content-between p-2  text-white">
+		<h5 class="android-green">{{x}}</h5>
+		<h5 class="pigment">{{iSp[x]}}</h5>
+	</div>
+{% endfor %}
+<div class="d-flex justify-content-between p-2  text-white">
+		<h5 class="android-green">Ip</h5>
+		<h5 class="pigment">{{ip}}</h5>
+	</div>
+</div>
+{% endblock %}

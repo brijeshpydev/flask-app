@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+{{title}}
+{% endblock %}
+{% block body %}
+<div class=" phone-owner">
+<nav class="navbar bg-dark shadow text-center">
+	<h1 class="mx-auto">
+		<b class="text-primary"></b><b class="energos">{{title}}</b>
+	</h1>
+</nav>
+<div class="container py-4 my-4 ">
+		<label for="phone" class="energos">10 digit number <b class="text-danger">*</b> </label>
+		<input type="text" class="form-control my-1 phone energos bg-orchid" id="phone" placeholder="phone number" minlength="3" maxlength="54" name="">
+		<button type="submit" class="btn btn-primary py-1 my-1 truecallerjs-btn bg-energos text-dark">Compile</button>
+	<div class=" my-2">
+		<div class="data shadow-sm rounded  " style="word-wrap: break-word;max-height: 500px;overflow-y: scroll;">
+		</div>
+	</div>
+</div>
+</div>
+{% endblock %}
